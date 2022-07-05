@@ -26,7 +26,7 @@ function clean(input: string): ReturnType<typeof strings.cleanUnicode> {
     return [value, err];
   }
 
-  return [value.padStart(9, '0'), null];
+  return [value, null];
 }
 
 const impl: Validator = {

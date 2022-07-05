@@ -21,6 +21,12 @@ describe('nl/bsn', () => {
     expect(result.error).toBeInstanceOf(InvalidChecksum);
   });
 
+  it('validate:1', () => {
+    const result = validate('1');
+
+    expect(result.error).toBeInstanceOf(InvalidLength);
+  });
+
   it('validate:12345678912', () => {
     const result = validate('12345678912');
 
